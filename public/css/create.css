@@ -1,0 +1,25 @@
+li{list-style: none}
+*{margin: 0;padding: 0}
+.zuo{background-color: palegreen;height: 100%;}
+.zuo ul li{padding-top: 14px;color: #333; padding-bottom: 12px;border-bottom: 1px #e0e0e0 solid;text-align: center;line-height: 20px}
+.you h2{border-bottom: 1px #EEEEEE solid;padding-bottom: 8px;color: #333;margin-bottom: 20px}
+.you .top{margin-bottom: 40px}
+.middle>p{font-size: 15px;line-height: 20px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

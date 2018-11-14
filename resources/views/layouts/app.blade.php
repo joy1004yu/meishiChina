@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/create.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .navbar-brand img{height: 25px}
@@ -25,7 +26,7 @@
 
     <div id="app">
 
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top yt_navbar">
 
             <div class="container">
                 <div class="navbar-header">
@@ -68,11 +69,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">登录</a></li>
+                            <li><a href="{{ route('login') }}" style="color: #fff">登录</a></li>
                             <li><a href="{{ route('register') }}">注册</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                <a href="#" class="dropdown-toggle u_name" style="color: #a8aea4" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -93,13 +94,13 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                                <a href="#" class="dropdown-toggle" style="color: #a8aea4" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                                     发布 <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="">菜谱</a>
+                                        <a href="/menu/create">菜谱</a>
                                         <a href="">话题</a>
                                     </li>
                                 </ul>
@@ -115,5 +116,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
+    {{--<script>--}}
+        {{--$release=document.getElementsByClassName("u_name")[0];--}}
+        {{--$release.--}}
+    {{--</script>--}}
 </body>
 </html>
